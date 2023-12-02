@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom button</title>
+  </head>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .open_modal,
+    .close_modal {
+      background-color: tomato;
+      color: whitesmoke;
+      font-size: 24px;
+      padding: 1rem 1.5rem;
+      border-radius: 0.6rem;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 300ms;
+    }
+    .open_modal:hover,
+    .close_modal:hover {
+      background-color: white;
+      color: tomato;
+      border: tomato 1px solid;
+    }
+
+    .modal {
+      background-color: whitesmoke;
+      width: 512px;
+      box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.125);
+      padding: 30px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+      margin: 12% auto;
+      z-index: 100;
+      /* transform: translate(-50%, -50%); */
+    }
+    p {
+      line-height: 1.5rem;
+      opacity: 75%;
+    }
+    .modal > h2 {
+      font-weight: 800;
+      font-size: 30px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <body>
+    <!-- open button -->
+    <button class="open_modal">Open plz!</button>
+
+    <!-- modal -->
+    <div class="modal hidden">
+      <h2>This is a modal</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eos at nemo
+        necessitatibus dolore dolores ad totam rem quia Lorem ipsum dolor, sit
+        amet consectetur adipisicing elit. Porro eum cum maxime itaque a fugit
+        laboriosam! Corrupti velit explicabo rerum?
+      </p>
+      <button class="close_modal">Close plz!</button>
+    </div>
+    <script src="./custom.js"></script>
+  </body>
+</html>
